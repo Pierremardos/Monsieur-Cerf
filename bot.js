@@ -37,6 +37,10 @@ bot.on('message', message => {
 			.setColor("0x0000FF")
 			message.channel.sendEmbed(embed)
       }
+      else if (message.content === prefix + "ping")
+			message.channel.send("Je brâme en :`" + `${message.createdTimestamp - Date.now()}` + " ms`");
+
+
       else sendError(message, "Erreur, problème dans les paramètres");
 
 }
